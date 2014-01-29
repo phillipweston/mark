@@ -6,7 +6,6 @@
 # mysql> GRANT ALL PRIVILEGES ON testdb.* TO 'user'@'localhost' IDENTIFIED BY 'passwd';
 # mysql> CREATE TABLE NAMES (id INTEGER NOT NULL, name CHAR(100) NOT NULL, value CHAR(100) NOT NULL, timestamp TIMESTAMP, PRIMARY KEY(id), UNIQUE(id, name));
 
-require 'rubygems'
 require 'mysql'
 require 'json'
 require 'open-uri'
@@ -24,6 +23,11 @@ class Marketo
     end
   end
 
+end
+
+if !ARGV[0]
+  puts "Usage: ./marketo.rb http://noizeeboy.com/marketo.json"
+  exit
 end
 
 marketo = Marketo.new ARGV[0]
