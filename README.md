@@ -1,8 +1,11 @@
-mark
+Mark***
 ====
-INSTALL RVM:
-\curl -sSL https://get.rvm.io | bash -s stable
+Prerequisites:
 
-rvm install 1.9.3
-gem install bundler
-bundle
+$ \curl -sSL https://get.rvm.io | bash -s stable
+$ rvm install 1.9.3
+$ gem install bundler
+$ cd mark
+$ bundle
+$ ./marketo.rb http://noizeeboy.com/marketo.json
+
